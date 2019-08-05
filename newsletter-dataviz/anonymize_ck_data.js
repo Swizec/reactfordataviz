@@ -72,9 +72,6 @@ async function writeData() {
 
 async function anonymize() {
     await parseSubscribers();
-    // await parseInactive("public/data/inactive_subscribers.csv");
-    // await parseInactive("public/data/complained_subscribers.csv");
-    // await parseInactive("public/data/bounced_subscribers.csv");
 
     await writeData();
 }

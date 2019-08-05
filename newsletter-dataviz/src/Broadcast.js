@@ -74,7 +74,7 @@ const Broadcast = ({ x, y, size, data, onMouseOver }) => {
             <CenteredText x={0} y={0} fontSize={`${size}pt`}>
                 💌
             </CenteredText>
-            <Hearts hearts={hearts} bid={data.id} height={y - 10} />
+            {/* <Hearts hearts={hearts} bid={data.id} height={y - 10} /> */}
         </g>
     );
 };

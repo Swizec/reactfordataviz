@@ -9,7 +9,6 @@ const dateFormat = d3.timeFormat("%x");
 
 function useDataset() {
     const [broadcasts, setBroadcasts] = useState([]);
-    const [responses, setResponses] = useState([]);
 
     useEffect(() => {
         (async function() {
@@ -27,8 +26,8 @@ function useDataset() {
                 );
 
             let forms = await d3.json("data/forms.json");
-            // associate forms with their respective email
 
+            // associate forms with their respective email
             const dateId = Object.fromEntries(
                 broadcasts.map(d => [dateFormat(d.created_at), d.id])
             );
@@ -57,10 +56,10 @@ function useDataset() {
         })();
     }, []);
 
-    return { broadcasts, responses };
+    return { broadcasts };
 }
 
-function useRevealAnimation({ duration, broadcasts, responses }) {
+function useRevealAnimation({ duration, broadcasts }) {
     const [N, setN] = useState(0);
 
     useEffect(() => {

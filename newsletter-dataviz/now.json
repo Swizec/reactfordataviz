@@ -39,6 +39,13 @@
             "dest": "/service-worker.js"
         },
         {
+            "src": "/data/(.*)",
+            "headers": {
+                "cache-control": "s-maxage=0"
+            },
+            "dest": "/data/$1"
+        },
+        {
             "src": "/(.*)",
             "headers": {
                 "cache-control": "s-maxage=0"
